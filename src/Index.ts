@@ -32,16 +32,15 @@ app.use("/api-docs", swaggerUI.serve , swaggerUI.setup(swaggerSpec));
 
 AppDataSource.initialize()
     .then( () => {
-        app.listen(() => {
-            console.log(` Servidor corriendo en  http://localhost${PORT}\n`);
+        app.listen(PORT,() => {
+            console.log(`Servidor corriendo en  http://localhost:${PORT}\n`);
             console.log(` Endpoints:`);
-            console.log(`API Products http://Localhost:${PORT}/api/products\n`);
+            console.log(`API Products http://localhost:${PORT}/api/products\n`);
             console.log(`Docuemntacion:`);
-            console.log(`swagger en http://Localhost${PORT}/api-docs`);
+            console.log(`swagger en http://localhost:${PORT}/api-docs`);
             
         });
     } )
     .catch( (error) => console.log(error) );
-
 
 
