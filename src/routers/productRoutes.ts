@@ -10,12 +10,20 @@ import {
 
 }from "../controllers/productController";
 
-const router = Router();
+const routes = Router();
+/**
+ * @swagger
+ *  tags:
+ *  name: products 
+ *  description: CRUD relacionado con productos 
+ * 
+ */
 
-router.get("product/",getAllProducts);// trae todos los productos  
-router.get("product/:id",getProductsByID);// trae un producto por id 
-router.get("product/",createProduct);// crea los productos
-router.get("product/:id",updateProduct);// actualiza los productos  
-router.get("product/:id",deleteProduct);// borra  los productos 
 
-export default router; 
+routes.get("/",getAllProducts);// trae todos los productos  
+routes.get("/:id",getProductsByID);// trae un producto por id 
+routes.get("/",createProduct);// crea los productos
+routes.get("/:id",updateProduct);// actualiza los productos  
+routes.get("/:id",deleteProduct);// borra  los productos 
+
+export default routes ; 

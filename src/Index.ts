@@ -1,4 +1,4 @@
-import express , { Application, } from "express";
+import express , { Application,  } from "express";
 
 import cors from "cors" ;
 
@@ -22,7 +22,7 @@ app.use (express.json()) ;
 
 //Rutas
 
-app.use ("/api/",router) ; // Ruta de Productos 
+app.use ("/api/Products", router ) ; // Ruta de Productos 
 
 //Documentacion del swagger 
 
